@@ -138,15 +138,15 @@ const navSlide = () => {
 
   // OPEN CONTACT WINDOW
 
-  let nodosContact = document.querySelectorAll(".contact")
+//   let nodosContact = document.querySelectorAll(".contact")
 
-  nodosContact.forEach((ele)=>{
-      ele.addEventListener("click", function(){
-          if(contact_card.style.display === "none"){
-              contact_card.style.display = "flex"
-          }else{
-              contact_card.style.display = "none"
-          }
+//   nodosContact.forEach((ele)=>{
+//       ele.addEventListener("click", function(){
+//           if(contact_card.style.display === "none"){
+//               contact_card.style.display = "flex"
+//           }else{
+//               contact_card.style.display = "none"
+//           }
   
-      })
-  })
+//       })
+//   })
