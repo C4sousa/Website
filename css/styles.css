@@ -781,19 +781,33 @@ ul.active img.grid__img{
   .main__wrapper, .porfolio, .slider, .grid, .header__section, .about, .experience, .footer__wrapper{
     width: 95%;
   }
+  .header__h1 {
+    font-size: 1.5em;
+  }
   .header__ul{
     display: none;
   }
   .header__burguer{
     display: block;
   }
-
+  .main__splash{
+    margin-top: 5rem;
+  } 
   .main__reel {
     border-radius: 0.5em 0.5em 0 0;
   }  
   .experience {
     border-radius: 0 0 0.5em 0.5em;
   }
+  .porfolio, .about {
+    padding-top: 1.5em;
+  }
+  div#portfolio {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
   .grid__ul{
       display: flex;
       flex-flow: column nowrap;
@@ -802,11 +816,6 @@ ul.active img.grid__img{
 
       flex-basis: 100%;
     }
-
-    /* .contact{
-      padding: 5rem 0;
-    } */
-  
     .contact__input{
       width: 100%;
       margin: 0.5rem 0;
