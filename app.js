@@ -62,3 +62,4 @@ let nodoMenu = document.querySelectorAll("#skills li")
 // nodoClose.addEventListener("click", function(){
 //         popUp.style.display = "none"
 // })
+
