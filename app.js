@@ -67,62 +67,44 @@ let nodoMenu = document.querySelectorAll("#skills li")
 
 
 
+const open_close = ()=>{
+  const burger = document.querySelector(".burger");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const nav = document.querySelector(".nav-links");
+  nav.classList.toggle("nav-active");
 
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+      
+    } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${
+        index / 7 + 0.5
+      }s `;
+    }
+  });
+  burger.classList.toggle("toggle");
+}
 
 
 const navSlide = () => {
-    const burger = document.querySelector(".burger");
-    const nav = document.querySelector(".nav-links");
-    const navLinks = document.querySelectorAll(".nav-links a");
   
+  const burger = document.querySelector(".burger");
     burger.addEventListener("click", () => {
-      nav.classList.toggle("nav-active");
-  
-      navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = "";
- 
-        } else {
-          link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.5
-          }s `;
-        }
-      });
-      burger.classList.toggle("toggle");
+      open_close();
+
     });
-
-
-
-
-
-    
-
 
     // when I click on any of the li with .header__li
     let nodoLi = document.querySelectorAll(".header__li")
 
-
     for (let i = 0; i < nodoLi.length; i++) {
         
         nodoLi[i].addEventListener("click", () => {
-            // delete .nav-active from id="nav"
-            let nodoUl = document.querySelector(".nav-links")
-                nodoUl.classList.remove("nav-active")
-
-
-            // delete .toogle from div.burger
-            let burger = document.querySelector(".burger");
-                burger.classList.remove("toggle")
+          
+            open_close();
         })
     }
-
-
-
-
-
-
-
-
 
   };
   
